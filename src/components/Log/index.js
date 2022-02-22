@@ -1,0 +1,30 @@
+import React, { useState } from 'react';
+import SignInForm from './SignInForm';
+import SignUpForm from './SignUpForm';
+
+const Log  = (props) => {
+    const [signUpModal, setSignUpModal] = useState(props.signUp);
+    const [signInModal, setSignInModal] = useState(props.signIn);
+    
+    const handleModls = () =>{
+    
+        setSignUpModal(!signUpModal)
+        setSignInModal(!signInModal)
+    }
+    return (
+        <div className="connection-form">
+            
+            <div className="form-container">
+                <ul>
+                    <li onClick={handleModls} className={signUpModal ? "active-btn" : null}>S'inscrire</li>
+                    
+                    <li onClick={handleModls} className={signInModal ? "active-btn" : null}>Se connecter</li>
+                </ul>
+                {signUpModal && <SignUpForm />}
+                {signInModal && <SignInForm />}
+            </div>
+        </div>
+    );
+};
+
+export default Log;
