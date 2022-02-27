@@ -166,7 +166,7 @@ const UpdateProfil = () => {
                                                     <div className="row my-4">
                                                         <div className="col "> <img className="imagefollow" src={elem.picture} /> </div>
                                                         <div className="col  "> <h3 className="pseudo"> {elem.pseudo} </h3> </div>
-                                                        <div className="col ">  <FollowHandler idToFollow={elem._id} /> </div>
+                                                        <div className="col ">  <FollowHandler idToFollow={elem._id} type="suggestion" /> </div>
 
                                                     </div>
 
@@ -205,7 +205,7 @@ const UpdateProfil = () => {
                                                     <div className="row my-4">
                                                         <div className="col "> <img className="imagefollow" src={elem.picture} /> </div>
                                                         <div className="col  "> <h3 className="pseudo"> {elem.pseudo} </h3> </div>
-                                                        <div className="col ">  <FollowHandler idToFollow={elem._id}  /> </div>
+                                                        <div className="col ">  <FollowHandler idToFollow={elem._id} type="suggestion" /> </div>
 
                                                     </div>
 
